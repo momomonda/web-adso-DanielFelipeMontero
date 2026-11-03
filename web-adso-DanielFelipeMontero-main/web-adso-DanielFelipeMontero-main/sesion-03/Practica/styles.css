@@ -1,0 +1,78 @@
+ *{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+} 
+
+
+
+hr{
+    background-color: blue;
+    height: 5px;
+    width: 50%;
+    border-style: dotted;
+
+}
+
+
+
+body{
+    font-family: "Poppins", Arial, sans-serif;
+    text-align: center;
+}
+
+h1{
+color: #2600ff;
+font-size: 50px;
+}
+
+.destacado, .tinto{
+    font-family: Georgia, 'Times New Roman', Times,
+     serif;
+    font-style: italic;
+    font-size: 30px;
+    background-color: rgb(136, 255, 0);
+}
+
+/*cuando sea una class se utliza el . cuando sea id se usa el # */
+
+#estudio{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:oblique;
+    font-size:15px;
+    background-color: chartreuse;
+}
+
+nav a{
+    text-decoration: none;
+    color:blue
+}
+h2, h3, h4{
+    color: tomato;
+    font-size: 20px;
+}
+
+
+
+.tinto {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+#portada {
+  border: 4px solid #6f4e37;
+  border-radius: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  font-weight: 600;
+}
+
+h2 { color: blue; }
+.titulo-seccion { color: green; }
+h2 { color: red; }
