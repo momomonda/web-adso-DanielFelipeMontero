@@ -1,0 +1,101 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.encabezado-principal {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    background-color: #1b365d;      
+    padding: 15px 30px;
+}
+
+.encabezado-principal h1 {
+    color: #ff6600;
+    font-size: 2em;
+    margin: 0; 
+}
+
+
+nav a {
+    color: #ffffff;          
+    text-decoration: none;   
+    font-weight: bold;       
+    padding: 8px 16px;       
+}
+
+nav a:hover {
+    color: #ff6600;          
+}
+
+main {
+    padding: 20px;
+}
+
+main h2{
+    color: #ffc400;
+}
+
+main h3{
+    color: #5e0ae6;
+}
+
+
+table {
+    border-collapse: collapse; 
+    width: 100%;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #333333; 
+}
+
+th, td {
+    padding: 12px; 
+    text-align: left;
+}
+
+th {
+    background-color: #1b365d; 
+    color: #ffffff;
+}
+
+
+.primero { color: #ff0000; }
+.segundo { color: #00ff00; }
+.tercero { color: #ff7b00; }
+.cuarto { color: #ff00ff; }
+.quinto { color: #ff0000; }
+
+.campo {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* 
+   PUNTO 3: DIFERENCIA ENTRE JUSTIFY-CONTENT Y ALIGN-ITEMS
+
+   - justify-content: Alinea y distribuye el espacio libre entre los elementos a lo 
+     largo del eje principal (main axis). Por defecto en row, es la alineación HORIZONTAL.
+   - align-items: Alinea los elementos a lo largo del eje transversal 
+     (cross axis). Por defecto en row, es la alineación VERTICAL dentro del contenedor flex.
+*/
+
