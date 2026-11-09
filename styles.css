@@ -1,13 +1,24 @@
-/* ==========================================================================
+/* 
    EXPLICACIÓN DE PADDING Y MARGIN:
-   --------------------------------------------------------------------------
+   
    - Padding (Relleno): Es el espacio interno entre el contenido del elemento 
      (texto, imágenes) y su propio borde. Sirve para dar respiración al contenido 
      dentro de su caja.
    
    - Margin (Margen): Es el espacio externo fuera del borde del elemento. Sirve 
      para separar unas cajas/tarjetas de otras o de las paredes de la pantalla.
-   ========================================================================== */
+ */
+
+/* 
+   EXPLICACIÓN: MOBILE FIRST
+
+   Mobile First (Móvil Primero) es una estrategia de diseño web donde
+   escribimos los estilos CSS base pensando primero en las pantallas pequeñas
+   de los celulares (por ejemplo, 1 sola columna). Luego, utilizamos 
+   "media queries" (como min-width) para adaptar el diseño a pantallas 
+   más grandes (tablets o computadoras), agregando columnas. Esto mejora el 
+   rendimiento y hace que el código sea más fácil de mantener.
+   */
 
 /* Estilos generales */
 * {
@@ -60,22 +71,39 @@ body {
     color: #2c3e50;
 }
 
-/* Cuadrícula de tarjetas */
+/* ==========================================================================
+   CUADRÍCULA DE TARJETAS (GRID RESPONSIVE - MOBILE FIRST)
+   ========================================================================== */
+
+/* Diseño base (Celulares): 1 sola columna */
 .grid-retos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; /* Reemplaza el margin de las tarjetas */
     justify-content: center;
+}
+
+/* Tablets (pantallas de 768px o más): 2 columnas */
+@media (min-width: 768px) {
+    .grid-retos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Computadoras (pantallas de 1024px o más): 3 columnas */
+@media (min-width: 1024px) {
+    .grid-retos {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Tarjeta (Card) */
 .card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
-    border-radius: 12px; /* Bordes redondeados */
-    padding: 24px;       /* Espacio interno */
-    margin: 10px;        /* Espacio externo entre tarjetas */
-    width: 280px;
+    border-radius: 12px;
+    padding: 24px;
+    /* Se elimina 'width: 280px' y 'margin' para que Grid controle el ancho y el espacio (gap) */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
@@ -125,6 +153,3 @@ footer {
     color: #ecf0f1;
     margin-top: 40px;
 }
-
-
-
