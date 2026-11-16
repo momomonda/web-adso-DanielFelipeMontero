@@ -1,0 +1,87 @@
+
+.encabezado-rec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.encabezado-rec h1 {
+  margin: 0;
+}
+
+.encabezado-rec .campo-texto {
+  min-width: 220px;
+}
+
+/* Formulario para agregar (Flexbox) */
+.formulario-agg {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.formulario-agg .campo-nombre {
+  flex: 1 1 240px;
+}
+
+.formulario-agg .campo-minutos {
+  width: 130px;
+}
+
+/* Alerta de validación */
+.alerta-valida {
+  margin-bottom: 1.25rem;
+}
+
+/* Lista y filas de recetas (Grid) */
+.lista-recetas {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.fila-receta {
+  display: grid;
+  grid-template-columns: 48px 1fr auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.miniatura-receta {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.nombre-receta {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Contador inferior */
+.estadistica-inferior {
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-borde);
+  color: var(--color-texto-suave);
+  font-weight: 600;
+}
+
+.estadistica-inferior p {
+  margin: 0;
+}

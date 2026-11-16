@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis recetas favoritas</title>
+  
+  <link rel="stylesheet" href="/Reto/Kit.css">
+  <link rel="stylesheet" href="tarea.css">
+</head>
+<body>
+  <main class="contenedor">
+    <section class="tarjeta-seccion">
+
+    
+      <header class="encabezado-rec">
+        <h1>Mis recetas favoritas</h1>
+        <input
+          type="search"
+          class="campo-texto"
+          placeholder="Buscar"
+          aria-label="Buscar receta"
+        >
+      </header>
+
+    
+      <section aria-labelledby="titulo-form">
+        <h2 id="titulo-form">Añadir nueva receta</h2>
+
+        <form class="formulario-agg" action="#" method="post">
+          <input
+            type="text"
+            class="campo-texto campo-nombre"
+            placeholder="Nombre de receta."
+            aria-label="Nombre de receta"
+          >
+          <input
+            type="number"
+            class="campo-texto campo-minutos"
+            placeholder="minutos"
+            min="1"
+            aria-label="Tiempo en minutos"
+          >
+          <button
+            type="submit"
+            class="btn btn-primario"
+            aria-label="Añadir nueva receta"
+          >
+            ➕
+          </button>
+        </form>
+
+      
+        <div class="alerta alerta-advertencia alerta-valida oculto" role="alert">
+          ⚠️ El nombre es obligatorio para guardar
+        </div>
+      </section>
+
+    
+      <section class="lista-recetas" aria-label="Lista de recetas guardadas">
+        <article class="fila-receta">
+          <span class="miniatura-receta" role="img" aria-label="Imagen de Pollo Sudado">🍲</span>
+          <span class="nombre-receta hecha">Pollo Sudado</span>
+          <button
+            type="button"
+            class="btn btn-secundario"
+            aria-label="Ver receta Pollo Sudado"
+          >
+            👁️
+          </button>
+          <button
+            type="button"
+            class="btn btn-peligro"
+            aria-label="Eliminar receta Pollo Sudado"
+          >
+            🗑️
+          </button>
+        </article>
+
+        <article class="fila-receta">
+          <span class="miniatura-receta" role="img" aria-label="Imagen de Carne Asada">🥩</span>
+          <span class="nombre-receta">Carne Asada</span>
+          <button
+            type="button"
+            class="btn btn-secundario"
+            aria-label="Ver receta Carne Asada"
+          >
+            👁️
+          </button>
+          <button
+            type="button"
+            class="btn btn-peligro"
+            aria-label="Eliminar receta Carne Asada"
+          >
+            🗑️
+          </button>
+        </article>
+
+        <article class="fila-receta">
+          <span class="miniatura-receta" role="img" aria-label="Imagen de Ensalada Fresca">🥗</span>
+          <span class="nombre-receta">Ensalada Fresca</span>
+          <button
+            type="button"
+            class="btn btn-secundario"
+            aria-label="Ver receta Ensalada Fresca"
+          >
+            👁️
+          </button>
+          <button
+            type="button"
+            class="btn btn-peligro"
+            aria-label="Eliminar receta Ensalada Fresca"
+          >
+            🗑️
+          </button>
+        </article>
+      </section>
+
+    
+      <footer class="estadistica-inferior">
+        <p>Total : 3 recetas guardadas</p>
+      </footer>
+
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kit - Sesión 10</title>
+  <link rel="stylesheet" href="Kit.css">
+</head>
+<body>
+  <main class="contenedor">
+    <header class="tarjeta-seccion">
+      <h1>Guía de Estilos</h1>
+      <p>Sistema de diseño base organizado en variables, base, componentes y estados.</p>
+    </header>
+    
+    <section class="tarjeta-seccion">
+      <h2>1. Paleta de colores</h2>
+      <div class="grid-paleta">
+        <div class="muestra-color">
+          <div class="muestra-bloque" style="background-color: var(--color-primario);"></div>
+          <div class="muestra-info">--color-primario</div>
+        </div>
+        <div class="muestra-color">
+          <div class="muestra-bloque" style="background-color: var(--color-secundario);"></div>
+          <div class="muestra-info">--color-secundario</div>
+        </div>
+        <div class="muestra-color">
+          <div class="muestra-bloque" style="background-color: var(--color-exito);"></div>
+          <div class="muestra-info">--color-exito</div>
+        </div>
+        <div class="muestra-color">
+          <div class="muestra-bloque" style="background-color: var(--color-advertencia);"></div>
+          <div class="muestra-info">--color-advertencia</div>
+        </div>
+        <div class="muestra-color">
+          <div class="muestra-bloque" style="background-color: var(--color-peligro);"></div>
+          <div class="muestra-info">--color-peligro</div>
+        </div>
+        <div class="muestra-color">
+          <div class="muestra-bloque" style="background-color: var(--color-texto);"></div>
+          <div class="muestra-info">--color-texto</div>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="tarjeta-seccion">
+      <h2>2. Tipografía</h2>
+      <h1>Encabezado principal</h1>
+      <h2>Encabezado de sección</h2>
+      <h3>Subtítulo de bloque</h3>
+      <p>
+        Este es un párrafo de demostración que incluye un
+        <a href="#tipografia">enlace interactivo con foco visible</a>
+        para comprobar el contraste y la legibilidad del texto.
+      </p>
+      <small>Texto pequeño (small) para notas aclaratorias o metadatos.</small>
+    </section>
+
+  
+    <section class="tarjeta-seccion">
+      <h2>3. Botones</h2>
+      <div class="fila-flex">
+        <button type="button" class="btn btn-primario">Principal</button>
+        <button type="button" class="btn btn-secundario">Secundario</button>
+        <button type="button" class="btn btn-peligro">Peligro</button>
+        <button type="button" class="btn btn-primario" disabled>Deshabilitado</button>
+      </div>
+    </section>
+
+  
+    <section class="tarjeta-seccion">
+      <h2>4. Alertas e Insignias</h2>
+
+      <h3>Alertas (4 tipos)</h3>
+      <div class="lista-alertas">
+        <div class="alerta alerta-info" role="status">
+          <strong>Información:</strong> Hay una nueva actualización disponible para el kit.
+        </div>
+        <div class="alerta alerta-exito" role="status">
+          <strong>Éxito:</strong> Los cambios de la hoja de estilos se guardaron correctamente.
+        </div>
+        <div class="alerta alerta-advertencia" role="alert">
+          <strong>Advertencia:</strong> Revisa el contraste antes de publicar en producción.
+        </div>
+        <div class="alerta alerta-peligro" role="alert">
+          <strong>Peligro:</strong> No se pudo conectar con el servidor de archivos.
+        </div>
+      </div>
+
+      <h3>Insignias (3 tipos)</h3>
+      <div class="fila-flex">
+        <span class="insignia insignia-primaria">Nueva versión</span>
+        <span class="insignia insignia-exito">Completado</span>
+        <span class="insignia insignia-advertencia">En revisión</span>
+      </div>
+    </section>
+
+    
+    <section class="tarjeta-seccion">
+      <h2>5. Estados</h2>
+
+      <h3>Indicador de carga (.cargando)</h3>
+      <div class="fila-flex" style="margin-bottom: 1.25rem;">
+        <span class="cargando" aria-label="Cargando"></span>
+        <span>Procesando solicitud...</span>
+      </div>
+
+      <h3>Tarea completada (.hecha)</h3>
+      <p class="hecha">Configurar la estructura de carpetas Sesion10/Reto.</p>
+
+      <h3>Campo con error (input.error + small.error)</h3>
+      <div class="campo-grupo" style="margin-bottom: 1.25rem;">
+        <label for="correo-usuario">Correo electrónico</label>
+        <input
+          id="correo-usuario"
+          type="email"
+          class="campo-texto error"
+          value="usuario-invalido@"
+          aria-invalid="true"
+        >
+        <small class="error">Ingresa un formato de correo electrónico válido.</small>
+      </div>
+
+      <h3>Botón activo (.activo)</h3>
+      <div class="fila-flex" style="margin-bottom: 1.25rem;">
+        <button type="button" class="btn btn-primario activo" aria-pressed="true">
+          Botón activo
+        </button>
+      </div>
+
+      <h3>Elemento oculto (.oculto)</h3>
+      <p>Debajo de esta línea existe un párrafo con la clase <code>.oculto</code>:</p>
+      <p class="oculto">Este texto está oculto mediante CSS.</p>
+      <!-- El párrafo anterior no se ve porque la clase .oculto aplica "display: none;",
+           lo que hace que el navegador no lo dibuje en pantalla ni le reserve espacio en el flujo visual. -->
+    </section>
+  </main>
+</body>
+</html>
