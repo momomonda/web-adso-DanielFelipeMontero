@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparativa Sesión 8 vs Sesión 13 - Verde Hogar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5fcf7;
+            color: #1d3324;
+            font-family: "Poppins", Arial, sans-serif;
+        }
+        .text-marca {
+            color: #2d8a4e;
+        }
+        .bg-marca {
+            background-color: #2d8a4e;
+            color: #ffffff;
+        }
+        .card-comparativa {
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-sm py-4 mb-5">
+        <div class="container text-center">
+            <span class="badge bg-marca rounded-pill px-3 py-2 mb-2">Sesión 13 · Tarea</span>
+            <h1 class="fw-bold mb-1">Comparativa de Landings: Verde Hogar</h1>
+            <p class="text-muted mb-0">CSS Puro (Sesión 8) vs. Bootstrap 5 (Sesión 13)</p>
+        </div>
+    </header>
+
+    <main class="container pb-5">
+
+      
+        <section class="mb-5">
+            <h2 class="h4 fw-bold text-marca mb-3">1. Auditoría de Lighthouse (Modo Incógnito)</h2>
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <article class="card h-100 border-0 shadow-sm card-comparativa">
+                        <div class="card-header bg-white border-0 pt-3 px-4 d-flex justify-content-between align-items-center">
+                            <h3 class="h5 fw-bold mb-0">Sesión 8 (CSS Puro)</h3>
+                            <span class="badge bg-warning text-dark">Rendimiento: 89</span>
+                        </div>
+                        <div class="card-body px-4 pb-4">
+                            <img src="img/lighthouse-s13.png" alt="Resultados de Lighthouse para la landing de la Sesión 8: Performance 89, Accessibility 92, Best Practices 100, SEO 91" class="img-fluid rounded border mb-3">
+                            <ul class="list-inline small text-muted mb-0">
+                                <li class="list-inline-item"><strong>Performance:</strong> 89</li>
+                                <li class="list-inline-item">· <strong>Accessibility:</strong> 92</li>
+                                <li class="list-inline-item">· <strong>Best Practices:</strong> 100</li>
+                                <li class="list-inline-item">· <strong>SEO:</strong> 91</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <article class="card h-100 border-0 shadow-sm card-comparativa">
+                        <div class="card-header bg-white border-0 pt-3 px-4 d-flex justify-content-between align-items-center">
+                            <h3 class="h5 fw-bold mb-0">Sesión 13 (Bootstrap 5)</h3>
+                            <span class="badge bg-success">Rendimiento: 94</span>
+                        </div>
+                        <div class="card-body px-4 pb-4">
+                            <img src="img/lighthouse-s8.png" alt="Resultados de Lighthouse para la landing de la Sesión 13: Performance 94, Accessibility 95, Best Practices 100, SEO 91" class="img-fluid rounded border mb-3">
+                            <ul class="list-inline small text-muted mb-0">
+                                <li class="list-inline-item"><strong>Performance:</strong> 94</li>
+                                <li class="list-inline-item">· <strong>Accessibility:</strong> 95</li>
+                                <li class="list-inline-item">· <strong>Best Practices:</strong> 100</li>
+                                <li class="list-inline-item">· <strong>SEO:</strong> 91</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Tabla comparativa -->
+        <section class="mb-5">
+            <h2 class="h4 fw-bold text-marca mb-3">2. Tabla Comparativa</h2>
+            <div class="card border-0 shadow-sm card-comparativa overflow-hidden">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="bg-marca">
+                            <tr>
+                                <th scope="col" class="py-3 ps-4">Criterio</th>
+                                <th scope="col" class="py-3">Sesión 8 (CSS Puro)</th>
+                                <th scope="col" class="py-3 pe-4">Sesión 13 (Bootstrap 5)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr>
+                                <th scope="row" class="ps-4">Puntaje de Rendimiento (Lighthouse)</th>
+                                <td><strong>89 / 100</strong> (Accesibilidad: 92)</td>
+                                <td><strong>94 / 100</strong> (Accesibilidad: 95)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="ps-4">Líneas de CSS propias escritas</th>
+                                <td>~185 líneas (layout, Flexbox, Grid, botones y media queries manuales).</td>
+                                <td>~75 líneas (únicamente colores de marca y variables <code>--bs-btn-...</code>).</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="ps-4">Facilidad para hacerla responsive</th>
+                                <td>Media: requirió escribir <code>@media</code> queries manuales para 768px y 1024px y ajustar cada sección.</td>
+                                <td>Muy alta: con clases como <code>col-12 col-md-6 col-lg-4</code> y <code>navbar-expand-md</code> se adaptó al instante.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="ps-4">Componentes interactivos</th>
+                                <td>Menú apilado fijo en móvil y enlaces de contacto simples sin validación.</td>
+                                <td>Navbar colapsable (menú hamburguesa) y formulario con validación nativa incluida.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="ps-4">Personalización y qué tan única se ve</th>
+                                <td>Control total sobre animaciones (<code>@keyframes</code>), sombras y proporciones exactas.</td>
+                                <td>Mantiene la identidad visual gracias a las variables de marca, aunque sigue la estructura estándar de tarjetas y grillas de Bootstrap.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h2 class="h4 fw-bold text-marca mb-3">3. Conclusión para el Proyecto Final</h2>
+            <div class="card border-0 shadow-sm card-comparativa p-4 bg-white">
+                <p class="mb-3">
+                    Para el proyecto final utilizaré <strong>Bootstrap 5 combinado con una hoja de estilos propia de marca</strong>. Como demuestran los resultados de Lighthouse, la versión con Bootstrap no solo alcanzó un mejor rendimiento (<strong>94 frente a 89</strong>) y mayor accesibilidad (<strong>95 frente a 92</strong>) gracias a sus atributos ARIA integrados[cite: 7, 8], sino que redujo en más de la mitad el CSS que tuve que escribir y mantener.
+                </p>
+                <p class="mb-0">
+                    Además, para un sistema real con múltiples vistas, formularios validados y navegación móvil, resolver la grilla y los componentes interactivos con Bootstrap permite concentrar el tiempo en la lógica del negocio y la experiencia de usuario, manteniendo una identidad visual propia mediante variables CSS sin depender de estilos genéricos.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-muted small py-4 border-top bg-white">
+        <div class="container">
+            Daniel Felipe Montero Sáenz · ADSO SENA · Sesión 13
+        </div>
+    </footer>
+
+</body>
+</html>
